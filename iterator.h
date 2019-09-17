@@ -17,7 +17,7 @@ class Iterator {
             // TODO
         }
 
-        Iterator<T> operator=(Iterator<T> other) {          
+        Iterator<T>& operator=(const Iterator<T> &other) {          
             // TODO
         }
 
@@ -25,11 +25,11 @@ class Iterator {
             // TODO
         }
 
-        Iterator<T> operator++() {
+        Iterator<T>& operator++() {
             // TODO
         }
 
-        Iterator<T> operator--() {
+        Iterator<T>& operator--() {
             // TODO
         }
 

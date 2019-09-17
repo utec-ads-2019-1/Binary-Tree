@@ -9,10 +9,9 @@ class Iterator;
 
 template <typename T>
 class Node {
-    private:
-        T data;
-        Node<T> *left;
-        Node<T> *right;
+    T data;
+    Node<T> *left;
+    Node<T> *right;
 
     template<class>
     friend class BSTree; 

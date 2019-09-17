@@ -6,8 +6,7 @@
 
 template <typename T> 
 class BSTree {
-    private:
-        Node<T> *root;
+    Node<T> *root;
 
     public:
         BSTree() : root(nullptr) {};
@@ -24,7 +23,11 @@ class BSTree {
             // TODO
         }
 
-        unsigned int size() {
+        size_t size() {
+            // TODO
+        }
+
+        size_t height() {
             // TODO
         }
 
