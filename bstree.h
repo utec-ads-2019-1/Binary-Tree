@@ -15,7 +15,7 @@ class BSTree {
             // TODO
         } 
 
-        bool insert(T data) {
+        void insert(T data) {
             // TODO
         }
 
