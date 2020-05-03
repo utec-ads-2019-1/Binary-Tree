@@ -28,15 +28,14 @@ using namespace std;
 #define NUMBER_OF_TESTS 1000
 
 class Tester {
-    private:
-        template <typename T>
-        static void testBSFTree(Mocker, vector<T>);
+    template <typename T>
+    static void testBSFTree(Mocker, vector<T>);
 
-        template <typename T>
-        static void sortAndPrune(vector<T>&);
+    template <typename T>
+    static void sortAndPrune(vector<T>&);
 
-    public:
-        static void execute();
+public:
+    static void execute();
 };
 
 #endif

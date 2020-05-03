@@ -7,6 +7,7 @@ void Tester::execute() {
         unsigned int size = mocker.generateRandomInt(10);
         int* elements = mocker.generateRandomArray<int>(size);
         testBSFTree<int>(mocker, vector<int>(elements, elements + size));
+        cout << "Test[" << i + 1 << "] sucessful" << endl;
     }
 }
 
@@ -35,7 +36,7 @@ void Tester::testBSFTree(Mocker mocker, vector<T> elements) {
 
     auto it = test->begin();
     for (int j = 0; j < elements.size() && it != test->end(); ++j) {
-        ASSERT(elements.at(j) == it->first, "There is a problem with the iterator (++)");
+        ASSERT(elements.at(j) == (*it).first, "There is a problem with the iterator (++)");
         ++it;
     }
 }
