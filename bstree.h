@@ -6,8 +6,7 @@
 
 template <typename T> 
 class BSTree {
-    private:
-        Node<T> *root;
+    Node<T> *root;
 
     public:
         BSTree() : root(nullptr) {};
@@ -31,6 +30,10 @@ class BSTree {
 
         int size() const {
             // TODO: Amount of nodes
+        }
+
+        int height() const {
+            // TODO
         }
 
         bool empty() const {
