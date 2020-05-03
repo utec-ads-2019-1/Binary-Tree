@@ -12,20 +12,29 @@ class BSTree {
     public:
         BSTree() : root(nullptr) {};
 
-        bool find(T data) { 
-            // TODO
+        bool insert(int, T) {
+            // TODO: Inserts an element with a key (a repeat key replaces the value)
+        }
+
+        bool remove(int) {
+            // TODO: Removes an element with a certain key
+        }
+
+        bool hasKey(int) const { 
+            // TODO: Looks for a key in the tree
         } 
 
-        bool insert(T data) {
-            // TODO
+        T operator[](int) {
+            // TODO: Gets the element with a certain key 
+            // NOTE: For 1+ point, research if it is possible to update the node with this same function (like insert, e.g. tree[2] = "hola")
         }
 
-        bool remove(T data) {
-            // TODO
+        int size() const {
+            // TODO: Amount of nodes
         }
 
-        unsigned int size() {
-            // TODO
+        bool empty() const {
+            // TODO: If the tree is empty
         }
 
         void traversePreOrder() {

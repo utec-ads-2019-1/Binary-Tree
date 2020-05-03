@@ -14,8 +14,8 @@ template <typename T>
 void Tester::testBSFTree(Mocker mocker, vector<T> elements) {
     BSTree<T> *test = new BSTree<T>;
     for (int j = 0; j < elements.size(); ++j) {
-        test->insert(elements[j]);
-        ASSERT(test->find(elements[j]), "There is a problem with the insert or find");
+        test->insert(elements[j], elements[j]);
+        ASSERT(test->hasKey(elements[j]), "There is a problem with the insert or find");
     }
 
     sortAndPrune(elements);
@@ -28,20 +28,15 @@ void Tester::testBSFTree(Mocker mocker, vector<T> elements) {
         T temp = elements.at(index);
         elements.erase(elements.begin() + index);
         test->remove(temp);
-        ASSERT(!test->find(temp), "There is a problem with the remove or find");
+        ASSERT(!test->hasKey(temp), "There is a problem with the remove or find");
     }
 
     ASSERT(elements.size() == test->size(), "There is a problem with the remove or size");
 
     auto it = test->begin();
     for (int j = 0; j < elements.size() && it != test->end(); ++j) {
-        ASSERT(elements.at(j) == *it, "There is a problem with the iterator (++)");
+        ASSERT(elements.at(j) == it->first, "There is a problem with the iterator (++)");
         ++it;
-    }
-
-    for (int j = elements.size() - 1; j >= 0; --j) {
-        --it;
-        ASSERT(elements.at(j) == *it, "There is a problem with the iterator (--)");
     }
 }
 

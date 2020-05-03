@@ -1,6 +1,7 @@
 #ifndef ITERATOR_H
 #define ITERATOR_H
 
+#include <utility>
 #include "node.h"
 
 template <typename T> 
@@ -29,11 +30,11 @@ class Iterator {
             // TODO
         }
 
-        Iterator<T> operator--() {
+        pair<int, T> operator*() {
             // TODO
         }
 
-        T operator*() {
+        pair<int, int>* operator->() { 
             // TODO
         }
 };
