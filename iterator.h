@@ -8,11 +8,11 @@
 template <typename T> 
 class Iterator {
 public:
-    Iterator() {
+    explicit Iterator() {
         // TODO
     }
 
-    Iterator(Node<T>* node) {
+    explicit Iterator(Node<T>* node) {
         // TODO
     }
 
