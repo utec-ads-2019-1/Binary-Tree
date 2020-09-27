@@ -2,7 +2,6 @@
 #define ITERATOR_H
 
 #include <utility>
-#include <vector>
 #include "node.h"
 
 template <typename T> 

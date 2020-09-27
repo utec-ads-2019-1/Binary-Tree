@@ -6,13 +6,13 @@
 
 template <typename T> 
 class BSTree {
-    Node<T> *root;
+    Node<T>* root;
 
 public:
     BSTree() : root(nullptr) {};
 
-    bool insert(int, T) {
-        // TODO: Inserts an element with a key (a repeat key replaces the value)
+    bool insert(int key, T data) {
+        // TODO: Inserts an element with a key (a repeated key replaces the value)
     }
 
     bool remove(int) {
@@ -24,8 +24,9 @@ public:
     } 
 
     T operator[](int) {
-        // TODO: Gets the element with a certain key 
-        // NOTE: For 1+ point, research if it is possible to update the node with this same function (like insert, e.g. tree[2] = "hola")
+        // TODO: Gets the element with a certain key and update
+        // TODO: It can also insert or update a node (like insert, e.g. tree[2] = "hola") 
+        // NOTE: Create a different function or modify the method signature if necessary
     }
 
     int size() {
@@ -33,7 +34,7 @@ public:
     }
 
     int height() {
-        // TODO
+        // TODO: Height of the tree
     }
 
     bool empty() const {
@@ -41,15 +42,15 @@ public:
     }
 
     void traversePreOrder() {
-        // TODO
+        // TODO: Print the tree in pre-order
     }
 
     void traverseInOrder() {
-        // TODO
+        // TODO: Print the tree in in-order
     }
 
     void traversePostOrder() {
-        // TODO
+        // TODO: Print the tree in post-order
     }
 
     Iterator<T> begin() {

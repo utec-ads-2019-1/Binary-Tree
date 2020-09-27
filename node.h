@@ -9,16 +9,15 @@ class Iterator;
 
 template <typename T>
 class Node {
-private:
     int key;    
     T data;
     Node<T>* left;
     Node<T>* right;
 
-    template<class>
+    template<typename>
     friend class BSTree; 
 
-    template<class>
+    template<typename>
     friend class Iterator; 
 };
 
